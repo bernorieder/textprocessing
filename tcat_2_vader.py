@@ -1,9 +1,13 @@
 # a little script that takes a TCAT tweet file as input, runs them through NLTK/VADER sentiment analysis
 # and writes a new files that adds four columns on the right
 
+# The VADER library is documented here:
+# Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text.
+# Eighth International Conference on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
+
 # change as required:
 filename = 'tcat_trump_5510tweets.csv'
-textrowname = "text"
+textrowname = 'text'
 
 import csv
 import nltk
