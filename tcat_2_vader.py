@@ -1,7 +1,9 @@
 # a little script that takes a TCAT tweet file as input, runs them through NLTK/VADER sentiment analysis
 # and writes a new files that adds four columns on the right
 
+# change as required:
 filename = 'tcat_trump_5510tweets.csv'
+textrowname = "text"
 
 import csv
 import nltk
@@ -21,5 +23,5 @@ csvwriter = csv.DictWriter(csvwrite, fieldnames=fieldnames)
 csvwriter.writeheader()
 
 for row in csvreader:
-	row.update(sid.polarity_scores(row["text"]))
+	row.update(sid.polarity_scores(row[textrowname]))
 	csvwriter.writerow(row)
