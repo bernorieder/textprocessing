@@ -36,7 +36,7 @@ t = [({word: (word in word_tokenize(x[0])) for word in all_words}, x[1]) for x i
 classifier = nltk.NaiveBayesClassifier.train(t)
 # classifier.show_most_informative_features()
 
-# read the lines to label and write to new file
+# read the lines to label, classify and write to new file
 csvread_tolabel = open(filename_tolabel, newline='\n')
 csvreader_tolabel = csv.DictReader(csvread_tolabel, delimiter=',', quotechar='"')
 rowcount = len(open(filename_tolabel).readlines())
